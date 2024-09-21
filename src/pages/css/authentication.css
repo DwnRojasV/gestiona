@@ -87,6 +87,17 @@
     margin-top: 3rem;
 }
 
-/* .container__slogan{
-    display: none;
-} */
+@media (max-width: 800px){
+    .container__slogan{
+        display: none;
+    }
+}
+
+@media (max-width: 500px){
+    .container__cardform{
+        width: 100vw;
+        height: 100vh;
+        padding: 50px 0;
+        min-width: 400px;
+    }
+}
