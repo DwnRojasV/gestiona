@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --accent-color: #1DA889;
+    --accent-dark: #129B7D;
+    --accent-background-1: #FBFEFD;
+    --accent-background-2: #F3FBF8;
+    --accent-text-1: #008164;
+    --accent-text-2: #193C32;
+
+    --gray-color: #8B8D98;
+    --gray-border-separator-3: #B9BBC6;
+
+    /* Fonts */
+    --roboto: "Roboto", sans-serif;
+    --ubuntu: "Ubuntu", sans-serif;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+    --heading-1: 32px;
+    --body-text: 16px;
+    --highlights: 18px;
+}
+a{
+    color: var(--accent-text-1);
+}
+a:visited{
+    color: var(--accent-color);
+}
+body {
+    background-color: var(--accent-background-2);
+    height: 100vh;
+    font-weight: var(--regular);
+    width: 100vw;
+}
+
+body,
+.form__input {
+    color: var(--accent-text-2);
+}
+
+body,
+.form__button,
+.form__input {
+    font-family: var(--roboto);
+    font-size: var(--body-text);
+    font-style: normal;
+}
+
+body,
+.container,
+.container__cardform,
+.container__slogan,
+.cardform__form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container,
+.container__cardform {
+    border-radius: 30px;
+}
+
+.container__cardform,
+.container__slogan,
+.cardform__form {
+    height: 100%;
+    flex-direction: column;
+
+}
+
+.container {
+    background-color: var(--accent-color);
+    height: clamp(400px, 90%, 820px);
+    max-width: 900px;
+    min-width: min-content;
+    width: 80%;
+    flex-direction: row;
+    box-shadow: 0 0 1rem var(--gray-color);
+    justify-content: center;
+    text-align: center;
+
+}
+
+.container__cardform {
+    background-color: var(--accent-background-1);
+    flex: 2;
+    justify-content: center;
+    padding: 100px;
+    box-sizing: border-box;
+    gap: 50px;
+
+}
+
+.container__slogan {
+    flex: 1;
+    min-width: min-content;
+    font-family: var(--ubuntu);
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    padding: 1rem;
+    box-sizing: content-box;
+}
+
+.cardform__form {
+    width: 320px;
+    height: min-content;
+    align-items: start;
+}
+
+.cardform__title {
+    font-size: var(--heading-1);
+    font-weight: var(--bold);
+}
+
+.form__input,
+.form__input:focus,
+.form__button {
+    width: 100%;
+    padding: 10px;
+    font-weight: var(--medium);
+    border: 1px solid var(--gray-border-separator-3);
+    border-radius: 5px;
+}
+
+.form__input::placeholder {
+    color: var(--gray-border-separator-3);
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 0 4px var(--accent-color);
+}
+
+.form__button {
+    box-sizing: content-box;
+    border-color: transparent;
+    background-color: var(--accent-color);
+    color: var(--accent-background-1);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: var(--accent-dark);
+    color: var(--accent-background-2);
+}
+
+.form__label {
+    margin: 30px 0 10px;
+}
+
+.slogan__title{
+    font-size: 3rem;
+}
+
+.slogan__logo{
+    fill: red !important;
+    aspect-ratio: 1;
+    width: 9rem;
+    margin-top: 3rem;
+}
+
+/* .container__slogan{
+    display: none;
+} */
