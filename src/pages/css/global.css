@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Estilos globales */
+:root {
+    --accent-color: #1DA889;
+    --accent-dark: #129B7D;
+    --accent-background-1: #FBFEFD;
+    --accent-background-2: #F3FBF8;
+    --accent-text-1: #008164;
+    --accent-text-2: #193C32;
+
+    --gray-color: #8B8D98;
+    --gray-border-separator-3: #B9BBC6;
+
+    /* Fonts */
+    --roboto: "Roboto", sans-serif;
+    --ubuntu: "Ubuntu", sans-serif;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+    --heading-1: 32px;
+    --body-text: 16px;
+    --highlights: 18px;
+}
+
+a {
+    color: var(--accent-text-1);
+}
+
+a:visited {
+    color: var(--accent-color);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-weight: var(--regular);
+}
+
+/* Estilo del text */
+body,
+.form__button,
+.form__input {
+    font-family: var(--roboto);
+    font-size: var(--body-text);
+    font-style: normal;
+}
+
+/* Estilo de inputs y buttons*/
+
+.form__label {
+    margin: 30px 0 10px;
+}
+
+.form__input::placeholder {
+    color: var(--gray-border-separator-3);
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 0 4px var(--accent-color);
+}
+
+.form__button {
+    box-sizing: content-box;
+    border-color: transparent;
+    background-color: var(--accent-color);
+    color: var(--accent-background-1);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.form__input,
+.form__input:focus,
+.form__button {
+    width: 100%;
+    padding: 10px;
+    font-weight: var(--medium);
+    border: 1px solid var(--gray-border-separator-3);
+    border-radius: 5px;
+}
+
+.form__button:hover {
+    background-color: var(--accent-dark);
+    color: var(--accent-background-2);
+}
