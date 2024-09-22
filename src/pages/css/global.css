@@ -37,13 +37,18 @@ body {
     font-weight: var(--regular);
 }
 
-/* Estilo del text */
+/* Estilo del texto */
 body,
 .form__button,
 .form__input {
     font-family: var(--roboto);
     font-size: var(--body-text);
     font-style: normal;
+}
+
+body,
+.form__input {
+    color: var(--accent-text-2);
 }
 
 /* Estilo de inputs y buttons*/
