@@ -5,11 +5,6 @@
 }
 
 .body,
-.form__input {
-    color: var(--accent-text-2);
-}
-
-.body,
 .container,
 .container__cardform,
 .container__slogan,
@@ -87,14 +82,14 @@
     margin-top: 3rem;
 }
 
-@media (max-width: 800px){
-    .container__slogan{
+@media (max-width: 800px) {
+    .container__slogan {
         display: none;
     }
 }
 
-@media (max-width: 500px){
-    .container__cardform{
+@media (max-width: 500px) {
+    .container__cardform {
         width: 100vw;
         height: 100vh;
         padding: 50px 0;
