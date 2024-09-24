@@ -1,1 +1,60 @@
 @import url("./sidebar.css");
+
+.body-profile,
+.main-container,
+.main-containter__user-profile,
+.user-profile__change-password,
+.user-profile__change-password > div {
+    display: flex;
+}
+
+.main-container {
+    overflow: auto;
+    padding: 50px;
+    width: calc(100% - var(--sidebar-width));
+}
+.main-container .form__button{
+    width: fit-content;
+    margin-inline:  auto;
+}
+
+.main-containter__user-profile {
+    flex: 1;
+}
+.main-containter__user-profile,
+.user-profile__form,
+.user-profile__change-password > div {
+    flex-direction: column;
+
+}
+.user-profile__change-password {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.user-profile__change-password > div{
+    width: calc(95%/3);
+    min-width: 230px;
+}
+
+
+.user-profile__header {
+    font-size: var(--heading-1);
+    font-weight: var(--bold);
+    text-align: center;
+}
+
+.user-profile__header,
+.user-profile__subtitle {
+    color: var(--gray-text-1);
+}
+
+.user-profile__form {
+    display: flex;
+}
+
+.user-profile__subtitle {
+    border-top: 1px solid var(--gray-border-separator-2);
+    font-size: var(--heading-2);
+    margin-top: 30px;
+    padding-top: 15px;
+}

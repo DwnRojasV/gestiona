@@ -15,6 +15,7 @@
 
     --gray-color: #8B8D98;
     --gray-text-1: #62636C;
+    --gray-border-separator-2: #CDCED7;
     --gray-border-separator-3: #B9BBC6;
 
     /* Fonts */
@@ -24,9 +25,13 @@
     --medium: 500;
     --bold: 700;
     --heading-1: 32px;
+    --heading-2: 24px;
     --body-text: 16px;
     --highlight: 18px;
     --min-text: 12px;
+
+    /* values */
+    --sidebar-width: 286px
 }
 
 a {
@@ -60,7 +65,7 @@ body,
 /* Estilo de inputs y buttons*/
 
 .form__label {
-    margin: 30px 0 10px;
+    padding: 30px 0 10px;
 }
 
 .form__input::placeholder {
@@ -73,12 +78,15 @@ body,
 }
 
 .form__button {
-    box-sizing: content-box;
     border-color: transparent;
     background-color: var(--accent-color);
     color: var(--accent-background-1);
     margin-top: 30px;
     cursor: pointer;
+}
+.form__button,
+.form__input{
+    box-sizing: border-box;
 }
 
 .form__input,

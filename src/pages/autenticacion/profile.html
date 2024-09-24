@@ -104,12 +104,21 @@
                     value="9465562123">
                 <h2 class="user-profile__subtitle">Cambiar contraseña</h2>
                 <div class="user-profile__change-password">
-                    <label for="" class="form__label">Contraseña actual</label>
-                    <input type="password" name="" id="" class="form__input">
-                    <label for="" class="form__label">Nueva contraseña</label>
-                    <input type="password" name="" id="" class="form__input">
-                    <label for="" class="form__label">Confimar contraseña</label>
-                    <input type="password" name="" id="" class="form__input">
+                    <div>
+                        <label for="current-password" class="form__label">Contraseña actual</label>
+                        <input type="password" name="current-password" id="current-password" class="form__input"
+                            placeholder="Ingresa tu contraseña">
+                    </div>
+                    <div>
+                        <label for="new-password" class="form__label">Nueva contraseña</label>
+                        <input type="password" name="new-password" id="new-password" class="form__input"
+                            placeholder="Ingresa tu nueva contraseña">
+                    </div>
+                    <div>
+                        <label for="confirm-password" class="form__label">Confimar contraseña</label>
+                        <input type="password" name="confirm-password" id="confirm-password" class="form__input"
+                            placeholder="Confirma la contraseña">
+                    </div>
                 </div>
                 <button type="submit" class="form__button">Guardar cambios</button>
             </form>
