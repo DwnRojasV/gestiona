@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/profile.css">
 </head>
 
-<body>
+<body class="body-profile">
     <!-- Sidebar -->
     <aside class="sidebar">
         <header class="sidebar__header">
@@ -85,7 +85,40 @@
             </div>
         </footer>
     </aside>
-    <!-- TODO: user profile -->
+    <!-- user profile -->
+    <main class="main-container">
+        <!-- User profile information -->
+        <section class="main-containter__user-profile">
+            <header class="user-profile__header">
+                <h1>Perfil de usuario</h1>
+            </header>
+            <form action="" class="user-profile__form">
+                <label for="user-fullname" class="form__label">Nombres y apellidos</label>
+                <input type="text" name="user-fullname" id="user-fullname" class="form__input" type="text"
+                    value="Jhon Doe">
+                <label for="user-email" class="form__label">Correo electrónico</label>
+                <input type="text" name="user-email" id="user-email" class="form__input" type="email"
+                    value="jhon.doe@correo.com" disabled>
+                <label for="user-telephone" class="form__label">Teléfono</label>
+                <input type="text" name="user-telephone" id="user-telephone" class="form__input" type="number"
+                    value="9465562123">
+                <h2 class="user-profile__subtitle">Cambiar contraseña</h2>
+                <div class="user-profile__change-password">
+                    <label for="" class="form__label">Contraseña actual</label>
+                    <input type="password" name="" id="" class="form__input">
+                    <label for="" class="form__label">Nueva contraseña</label>
+                    <input type="password" name="" id="" class="form__input">
+                    <label for="" class="form__label">Confimar contraseña</label>
+                    <input type="password" name="" id="" class="form__input">
+                </div>
+                <button type="submit" class="form__button">Guardar cambios</button>
+            </form>
+        </section>
+        <!-- Admin Users -->
+        <section class="main-container__admin-user">
+            <!-- TODO: sección de administrador de usuario -->
+        </section>
+    </main>
 </body>
 
 </html>
