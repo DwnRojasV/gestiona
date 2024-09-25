@@ -50,6 +50,7 @@ body {
 
 /* Estilo del texto */
 body,
+.primary-button,
 .form__button,
 .form__input {
     font-family: var(--roboto);
@@ -77,6 +78,7 @@ body,
     box-shadow: 0 0 4px var(--accent-color);
 }
 
+.primary-button,
 .form__button {
     border-color: transparent;
     background-color: var(--accent-color);
@@ -84,13 +86,16 @@ body,
     margin-top: 30px;
     cursor: pointer;
 }
+
+.primary-button,
 .form__button,
-.form__input{
+.form__input {
     box-sizing: border-box;
 }
 
 .form__input,
 .form__input:focus,
+.primary-button,
 .form__button {
     width: 100%;
     padding: 10px;
@@ -99,6 +104,7 @@ body,
     border-radius: 5px;
 }
 
+.primary-button:hover,
 .form__button:hover {
     background-color: var(--accent-dark);
     color: var(--accent-background-2);
