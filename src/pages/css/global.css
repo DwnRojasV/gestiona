@@ -7,15 +7,21 @@
     --accent-background-1: #FBFEFD;
     --accent-background-2: #F3FBF8;
     --accent-border-separator-1: #A6DFCC;
-    --accent-border-separator-2: #86CFB8;
+    --accent-border-separator-2: #86CFB8; 
+    --accent-border-separator-3: #51BB9E; 
     --accent-interactive-componente-2: #D1F2E7;
     --accent-interactive-componente-3: #BEEADB;
     --accent-text-1: #008164;
     --accent-text-2: #193C32;
 
     --gray-color: #8B8D98;
+    --gray-color-dark: #80828D;
     --gray-text-1: #62636C;
+    --gray-border-separator-2: #CDCED7;
     --gray-border-separator-3: #B9BBC6;
+    --gray-interactive-component-1: #EFF0F3;
+    --gray-interactive-component-2: #E7E8EC;
+    --gray-interactive-component-3: #E0E1E6;
 
     /* Fonts */
     --roboto: "Roboto", sans-serif;
@@ -24,9 +30,14 @@
     --medium: 500;
     --bold: 700;
     --heading-1: 32px;
+    --heading-2: 24px;
     --body-text: 16px;
     --highlight: 18px;
     --min-text: 12px;
+
+    /* values */
+    --sidebar-width: 286px;
+    --radius: 10px;
 }
 
 a {
@@ -45,6 +56,9 @@ body {
 
 /* Estilo del texto */
 body,
+.modal,
+.primary-button,
+.secondary-button,
 .form__button,
 .form__input {
     font-family: var(--roboto);
@@ -60,7 +74,7 @@ body,
 /* Estilo de inputs y buttons*/
 
 .form__label {
-    margin: 30px 0 10px;
+    padding: 30px 0 10px;
 }
 
 .form__input::placeholder {
@@ -71,18 +85,34 @@ body,
     outline: none;
     box-shadow: 0 0 4px var(--accent-color);
 }
-
-.form__button {
-    box-sizing: content-box;
+.primary-button,
+.secondary-button,
+.form__button,
+.modal .modal__close {
     border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.primary-button,
+.secondary-button,
+.form__button {
     background-color: var(--accent-color);
     color: var(--accent-background-1);
     margin-top: 30px;
-    cursor: pointer;
+}
+
+.primary-button,
+.secondary-button,
+.form__button,
+.form__input {
+    box-sizing: border-box;
 }
 
 .form__input,
 .form__input:focus,
+.primary-button,
+.secondary-button,
 .form__button {
     width: 100%;
     padding: 10px;
@@ -90,8 +120,49 @@ body,
     border: 1px solid var(--gray-border-separator-3);
     border-radius: 5px;
 }
+.secondary-button{
+    background-color: var(--gray-interactive-component-1);
+    border: 1px solid var(--accent-border-separator-3);
+    color: var(--accent-text-1);
+}
+.secondary-button:hover{
+    background-color: var(--gray-interactive-component-3);
+}
 
+.primary-button:hover,
 .form__button:hover {
     background-color: var(--accent-dark);
     color: var(--accent-background-2);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 1rem var(--gray-color);
+    border: var(--border) solid var(--gray-color);
+    border-radius: var(--radius);
+}
+
+::backdrop {
+    background-image: linear-gradient(90deg,
+            var(--gray-color),
+            var(--gray-color-dark)
+            );
+    opacity: 0.75;
+}
+
+.modal .modal__close{
+    position:absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.modal__close{
+    background-image: url(../../assets/icons/close.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20px;
+    aspect-ratio: 1;
+
 }

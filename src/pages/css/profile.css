@@ -1,1 +1,169 @@
 @import url("./sidebar.css");
+
+.body-profile,
+.add-user__form .form__container-buttons,
+.main-container,
+.main-container__admin-user,
+.main-containter__user-profile,
+.table__body--action,
+.user-profile__form,
+.user-profile__change-password,
+.user-profile__change-password>div,
+.add-user__form {
+    display: flex;
+}
+
+.main-container {
+    --border: 1px;
+    --icon-with: 20px;
+    --padding: 50px;
+    --padding-normal:15px;
+    --padding-double:30px;
+    --padding-cell: 10px;
+    --min-input-width: 230px;
+    overflow: auto;
+    padding: var(--padding);
+    width: calc(100% - var(--sidebar-width));
+}
+
+.main-container .primary-button,
+.main-container .secondary-button,
+.main-container .form__button {
+    margin-inline: auto;
+    width: fit-content;
+}
+
+.main-container__admin-user,
+.main-containter__user-profile {
+    flex: 1;
+}
+
+.main-containter__user-profile {
+    padding-bottom: var(--padding);
+}
+
+.main-container__admin-user {
+    border-top: var(--border) solid var(--gray-border-separator-3);
+    min-height: 50vh;
+    padding-top: var(--padding);
+}
+
+.main-container,
+.main-containter__user-profile,
+.main-container__admin-user,
+.user-profile__form,
+.user-profile__change-password>div,
+.add-user__form {
+    flex-direction: column;
+
+}
+
+.main-container__admin-user,
+.user-profile__change-password {
+    justify-content: space-between;
+}
+
+.user-profile__change-password {
+    flex-wrap: wrap;
+}
+
+.user-profile__change-password>div {
+    min-width: var(--min-input-width);
+    width: calc(95%/3);
+}
+
+.add-user__title,
+.user-profile__header {
+    font-size: var(--heading-1);
+    font-weight: var(--bold);
+}
+
+.add-user__title,
+.admin-user__table,
+.user-profile__header {
+    text-align: center;
+}
+
+.user-profile__header,
+.user-profile__subtitle {
+    color: var(--gray-text-1);
+}
+
+.user-profile__subtitle {
+    border-top: var(--border) solid var(--gray-border-separator-2);
+    font-size: var(--heading-2);
+    padding-top: var(--padding-normal);
+}
+
+.user-profile__subtitle,
+.admin-user__table {
+    margin-top: var(--padding-double);
+}
+
+.admin-user__table {
+    display: table;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.table__head {
+    font-weight: var(--medium);
+}
+
+.table__body--action {
+    justify-content: space-evenly;
+}
+
+.admin-user__table tr {
+    display: table-row;
+    border-bottom: var(--border) solid var(--gray-border-separator-2);
+}
+
+.admin-user__table td {
+    display: table-cell;
+    padding: var(--padding-cell);
+}
+
+.admin-user__table tr div {
+    cursor: pointer;
+    display: inline-block;
+    height: var(--icon-with);
+}
+
+.admin-user__table tr div,
+.table__action--edit,
+.table__action--delete {
+    width: var(--icon-with);
+}
+
+.table__action--edit,
+.table__action--delete {
+    aspect-ratio: 1;
+}
+
+.table__action--edit {
+    background-image: url(../../assets/icons/edit.svg);
+}
+
+.table__action--delete {
+    background-image: url(../../assets/icons/trash.svg);
+}
+
+.add-user{
+    color: var(--accent-text-2);
+    padding: 2rem;
+    width: auto;
+    min-width: 400px;
+}
+.form__section__label{
+    margin: 0 5px 0 var(--padding-double);
+}
+
+.add-user__form .form__container-buttons{
+    justify-content: center;
+    gap: 1rem
+}
+
+.form__container-buttons button{
+    margin-inline: 0 !important;
+}
