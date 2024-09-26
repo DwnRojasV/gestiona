@@ -149,10 +149,10 @@
                             <span>Ver</span>
                             <input type="checkbox" name="see" id="see">
                             <span>Editar</span>
-                            <input type="checkbox" name="edit" id="edit">
+                            <input type="checkbox" name="edit" -add-user>
                         </td>
                         <td class="table__body--action">
-                            <div class="table__action--edit"  title="Haz clic aquí para editar el usuario"></div>
+                            <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
                             <div class="table__action--delete" title="Haz clic aquí para eliminar el usuario"></div>
                         </td>
                     </tr>
@@ -165,7 +165,7 @@
                             <span>Ver</span>
                             <input type="checkbox" name="see" id="see">
                             <span>Editar</span>
-                            <input type="checkbox" name="edit" id="edit">
+                            <input type="checkbox" name="edit" -add-user>
                         </td>
                         <td class="table__body--action">
                             <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
@@ -181,7 +181,7 @@
                             <span>Ver</span>
                             <input type="checkbox" name="see" id="see">
                             <span>Editar</span>
-                            <input type="checkbox" name="edit" id="edit">
+                            <input type="checkbox" name="edit" -add-user>
                         </td>
                         <td class="table__body--action">
                             <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
@@ -197,7 +197,7 @@
                             <span>Ver</span>
                             <input type="checkbox" name="see" id="see">
                             <span>Editar</span>
-                            <input type="checkbox" name="edit" id="edit">
+                            <input type="checkbox" name="edit" -add-user>
                         </td>
                         <td class="table__body--action">
                             <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
@@ -213,7 +213,7 @@
                             <span>Ver</span>
                             <input type="checkbox" name="see" id="see">
                             <span>Editar</span>
-                            <input type="checkbox" name="edit" id="edit">
+                            <input type="checkbox" name="edit" -add-user>
                         </td>
                         <td class="table__body--action">
                             <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
@@ -222,9 +222,41 @@
                     </tr>
                 </tbody>
             </table>
-            <button type="button" class="primary-button">Agregar usuario</button>
+            <button type="button" class="primary-button" id="add-user">Agregar usuario</button>
         </section>
+        <!-- modal agregar usuario -->
+        <dialog class="modal add-user">
+            <button class="modal__close" autofocus>
+                <i class="modal__close--icon"></i>
+            </button>
+            <h2 class="add-user__title">Información de Usuario</h2>
+            <form action="" class="add-user__form">
+                <label for="add-user-fullname" class="form__label">Nombre Completo</label>
+                <input type="text" name="add-user-fullname" id="add-user-fullname" class="form__input" placeholder="Ingrese el nombre completo del usuario">
+                <label for="add-user-email" class="form__label">Correo</label>
+                <input type="text" name="add-user-email" id="add-user-email" class="form__input" placeholder="Ingrese el correo del usuario">
+                <label for="add-user-rol" class="form__label">Rol</label>
+                <select name="add-user-rol" id="add-user-rol" class="form__input form__select">
+                    <optgroup class="form__optgroup" label="Selecciona el rol del usuario">
+                        <option class="form__option" value="delegado">Delegado</option>
+                        <option value="administrador">Administrador</option>
+                    </optgroup>
+                </select>
+                <label class="form__label">Permisos</label>
+                <div class="form__section">
+                    <label for="see" class="form__section__label">Ver</label>
+                    <input type="checkbox" name="see" id="see">
+                    <label for="edit" class="form__section__label">Editar</label>
+                    <input type="checkbox" name="edit" id="edit-add-user">
+                </div>
+                <div class="form__container-buttons">
+                    <button class="secondary-button">Cancelar</button>
+                    <button type="submit" class="primary-button">Agregar Usuario</button>
+                </div>
+            </form>
+        </dialog>
     </main>
+    <script src="../script/profile.js"></script>
 </body>
 
 </html>
