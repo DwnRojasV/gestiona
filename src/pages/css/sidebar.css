@@ -30,12 +30,22 @@
     width: 286px;
 }
 
+.sidebar,
+.sidebar__overwiew{
+    min-height: min-content;
+}
+.sidebar__header,
+.sidebar__account
+{
+    border-bottom: var(--border) solid var(--accent-border-separator-1);
+
+}
+
 .sidebar__header,
 .sidebar__overwiew,
 .sidebar__account,
 .sidebar__footer {
     padding: var(--padding);
-    border-bottom: var(--border) solid var(--accent-border-separator-1);
 }
 .sidebar__footer{
     gap: var(--padding);
@@ -63,8 +73,12 @@
 }
 
 .sidebar__overwiew {
-    height: 100%;
+    height: max-content;
     justify-content: center;
+    margin-block: auto;
+}
+.sidebar__account{
+    border-top: var(--border) solid var(--accent-border-separator-1);
 }
 .sidebar__profile-image{
     align-items: center;
