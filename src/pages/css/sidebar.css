@@ -126,6 +126,11 @@
 .option__link:visited {
     color: inherit;
 }
+
+.option__link--text{
+    color: var(--accent-text-2);
+}
+
 .profile__username,
 .sidebar__profile-image{
     font-size: var(--highlight);
