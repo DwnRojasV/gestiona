@@ -23,7 +23,7 @@
     --min-input-width: 230px;
     overflow: auto;
     padding: var(--padding);
-    width: calc(100% - var(--sidebar-width));
+    width: 100%;
 }
 
 .main-container .primary-button,

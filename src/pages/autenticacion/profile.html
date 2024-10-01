@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/profile.css">
+    <script src="../script/global.js" defer></script>
+    <script src="../script/profile.js" defer></script>
+
 </head>
 
 <body class="body-profile">
@@ -20,7 +23,7 @@
                 <h1 class="slogan__title">GestionA</h1>
                 <h2 class="slogan__description">Sistema de gestión agrícola</h2>
             </div>
-            <i class="header__icon"></i>
+            <i class="header__icon" id="sidebar-close"></i>
         </header>
         <nav class="sidebar__overwiew">
             <p class="sidebar__label">Gestión de cultivos</p>
@@ -28,37 +31,37 @@
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon plant"></i>
-                        <span class="option__link--text" >Cultivo</span>
+                        <span class="option__link--text">Cultivo</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon loop"></i>
-                        <span class="option__link--text" >Temporada</span>
+                        <span class="option__link--text">Temporada</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon inventory"></i>
-                        <span class="option__link--text" >Inventario</span>
+                        <span class="option__link--text">Inventario</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon calendar"></i>
-                        <span class="option__link--text" >Actividades</span>
+                        <span class="option__link--text">Actividades</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon production"></i>
-                        <span class="option__link--text" >Producción</span>
+                        <span class="option__link--text">Producción</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon sell"></i>
-                        <span class="option__link--text" >Ventas</span>
+                        <span class="option__link--text">Ventas</span>
                     </a>
                 </li>
             </ul>
@@ -67,13 +70,13 @@
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon data"></i>
-                        <span class="option__link--text" >Información</span>
+                        <span class="option__link--text">Información</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon dashboard"></i>
-                        <span class="option__link--text" >Dashboard</span>
+                        <span class="option__link--text">Dashboard</span>
                     </a>
                 </li>
             </ul>
@@ -84,13 +87,13 @@
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon settings"></i>
-                        <span class="option__link--text" >Configuración</span>
+                        <span class="option__link--text">Configuración</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="sidebar__option option__link">
                         <i class="option__icon logout"></i>
-                        <span class="option__link--text" >Cerrar Sesión</span>
+                        <span class="option__link--text">Cerrar Sesión</span>
                     </a>
                 </li>
             </ul>
@@ -252,9 +255,11 @@
             <h2 class="add-user__title">Información de Usuario</h2>
             <form action="" class="add-user__form">
                 <label for="add-user-fullname" class="form__label">Nombre Completo</label>
-                <input type="text" name="add-user-fullname" id="add-user-fullname" class="form__input" placeholder="Ingrese el nombre completo del usuario">
+                <input type="text" name="add-user-fullname" id="add-user-fullname" class="form__input"
+                    placeholder="Ingrese el nombre completo del usuario">
                 <label for="add-user-email" class="form__label">Correo</label>
-                <input type="text" name="add-user-email" id="add-user-email" class="form__input" placeholder="Ingrese el correo del usuario">
+                <input type="text" name="add-user-email" id="add-user-email" class="form__input"
+                    placeholder="Ingrese el correo del usuario">
                 <label for="add-user-rol" class="form__label">Rol</label>
                 <select name="add-user-rol" id="add-user-rol" class="form__input form__select">
                     <optgroup class="form__optgroup" label="Selecciona el rol del usuario">
@@ -276,7 +281,6 @@
             </form>
         </dialog>
     </main>
-    <script src="../script/profile.js"></script>
 </body>
 
 </html>
