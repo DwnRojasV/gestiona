@@ -29,6 +29,7 @@
     font-weight: var(--medium);
     height: 100vh;
     width: 286px;
+    transition: all 3s ease;
 }
 
 .sidebar,
@@ -186,4 +187,35 @@
 
 .logout {
     background-image: url("../../assets/icons/exit.svg");
+}
+
+.sidebar--hidden :is(
+    .header__slogan, 
+    .option__link--text,
+    .profile__username,
+    .profile__email,
+    #sidebar-close,
+    )
+{
+    display: none;
+}
+.sidebar--hidden .sidebar__label{
+    visibility: hidden;
+    width: 0px;
+    height: var(--body-text);
+}
+.sidebar--hidden .sidebar__footer{
+    gap: 0;
+    justify-content: center;
+}
+
+.sidebar--hidden{
+    transition: all 5s ease;
+    width: fit-content !important;
+}
+.sidebar--hidden :is(
+    .sidebar__account,
+    .sidebar__overwiew,
+){
+    align-items: center;
 }
