@@ -12,5 +12,8 @@
     "agrícola"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gestiona": "file:"
+  }
 }
