@@ -2,285 +2,235 @@
 <html lang="es-ES">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GestionA | Perfil de usuario</title>
-    <link rel="icon" type="image/svg+xml" href="../../assets/img/Favicon.svg">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/profile.css">
-    <script src="../script/global.js" defer></script>
-    <script src="../script/profile.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GestionA | Perfil de usuario</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/Favicon.svg">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/profile.css">
+  <script src="../script/global.js" defer></script>
+  <script src="../script/profile.js" defer></script>
+  <script src="../script/crud.js" defer></script>
+
 
 </head>
 
 <body class="body-profile">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <header class="sidebar__header">
-            <img src="../../assets/img/logo-accent.svg" alt="Logo de GestionA" class="header__logo">
-            <div class="header__slogan">
-                <h1 class="slogan__title">GestionA</h1>
-                <h2 class="slogan__description">Sistema de gestión agrícola</h2>
-            </div>
-            <i class="header__icon" id="sidebar-close"></i>
-        </header>
-        <nav class="sidebar__overwiew">
-            <p class="sidebar__label">Gestión de cultivos</p>
-            <ul>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon plant"></i>
-                        <span class="option__link--text">Cultivo</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon loop"></i>
-                        <span class="option__link--text">Temporada</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon inventory"></i>
-                        <span class="option__link--text">Inventario</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon calendar"></i>
-                        <span class="option__link--text">Actividades</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon production"></i>
-                        <span class="option__link--text">Producción</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon sell"></i>
-                        <span class="option__link--text">Ventas</span>
-                    </a>
-                </li>
-            </ul>
-            <p class="sidebar__label">Métricas</p>
-            <ul>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon data"></i>
-                        <span class="option__link--text">Información</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon dashboard"></i>
-                        <span class="option__link--text">Dashboard</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <nav class="sidebar__account">
-            <p class="sidebar__label">Cuenta</p>
-            <ul>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon settings"></i>
-                        <span class="option__link--text">Configuración</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar__option option__link">
-                        <i class="option__icon logout"></i>
-                        <span class="option__link--text">Cerrar Sesión</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <footer class="sidebar__footer">
-            <div class="sidebar__profile-image">
-                <span>A</span>
-            </div>
-            <div class="sidebar_profile-information">
-                <p class="profile__username">Jhon Doe</p>
-                <p class="profile__email">jhon.doe@correo.com</p>
-            </div>
-        </footer>
-    </aside>
-    <!-- user profile -->
-    <main class="main-container">
-        <!-- User profile information -->
-        <section class="main-containter__user-profile">
-            <header class="user-profile__header">
-                <h1>Perfil de usuario</h1>
-            </header>
-            <form action="./" class="user-profile__form">
-                <label for="user-fullname" class="form__label">Nombres y apellidos</label>
-                <input type="text" name="user-fullname" id="user-fullname" class="form__input" type="text"
-                    value="Jhon Doe">
-                <label for="user-email" class="form__label">Correo electrónico</label>
-                <input type="text" name="user-email" id="user-email" class="form__input" type="email"
-                    value="jhon.doe@correo.com" disabled>
-                <label for="user-telephone" class="form__label">Teléfono</label>
-                <input type="text" name="user-telephone" id="user-telephone" class="form__input" type="number"
-                    value="9465562123">
-                <h2 class="user-profile__subtitle">Cambiar contraseña</h2>
-                <div class="user-profile__change-password">
-                    <div>
-                        <label for="current-password" class="form__label">Contraseña actual</label>
-                        <input type="password" name="current-password" id="current-password" class="form__input"
-                            placeholder="Ingresa tu contraseña">
-                    </div>
-                    <div>
-                        <label for="new-password" class="form__label">Nueva contraseña</label>
-                        <input type="password" name="new-password" id="new-password" class="form__input"
-                            placeholder="Ingresa tu nueva contraseña">
-                    </div>
-                    <div>
-                        <label for="confirm-password" class="form__label">Confimar contraseña</label>
-                        <input type="password" name="confirm-password" id="confirm-password" class="form__input"
-                            placeholder="Confirma la contraseña">
-                    </div>
-                </div>
-                <button type="submit" class="form__button">Guardar cambios</button>
-            </form>
-        </section>
-        <!-- Admin Users -->
-        <section class="main-container__admin-user">
-            <header class="user-profile__header">
-                <h1>Administrar usuarios</h1>
-            </header>
-            <table class="admin-user__table">
-                <thead class="table__head">
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                        <th>Permisos</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody class="table__body">
-                    <tr>
-                        <td>1</td>
-                        <td>Jane Doe</td>
-                        <td>jane.doe@correo.com</td>
-                        <td>Delegado</td>
-                        <td>
-                            <span>Ver</span>
-                            <input type="checkbox" name="see">
-                            <span>Editar</span>
-                            <input type="checkbox" name="edit">
-                        </td>
-                        <td class="table__body--action">
-                            <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
-                            <div class="table__action--delete" title="Haz clic aquí para eliminar el usuario"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jane Doe</td>
-                        <td>jane.doe@correo.com</td>
-                        <td>Delegado</td>
-                        <td>
-                            <span>Ver</span>
-                            <input type="checkbox" name="see">
-                            <span>Editar</span>
-                            <input type="checkbox" name="edit">
-                        </td>
-                        <td class="table__body--action">
-                            <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
-                            <div class="table__action--delete" title="Haz clic aquí para eliminar el usuario"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Jane Doe</td>
-                        <td>jane.doe@correo.com</td>
-                        <td>Delegado</td>
-                        <td>
-                            <span>Ver</span>
-                            <input type="checkbox" name="see">
-                            <span>Editar</span>
-                            <input type="checkbox" name="edit">
-                        </td>
-                        <td class="table__body--action">
-                            <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
-                            <div class="table__action--delete" title="Haz clic aquí para eliminar el usuario"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Jane Doe</td>
-                        <td>jane.doe@correo.com</td>
-                        <td>Delegado</td>
-                        <td>
-                            <span>Ver</span>
-                            <input type="checkbox" name="see">
-                            <span>Editar</span>
-                            <input type="checkbox" name="edit">
-                        </td>
-                        <td class="table__body--action">
-                            <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
-                            <div class="table__action--delete" title="Haz clic aquí para eliminar el usuario"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Jane Doe</td>
-                        <td>jane.doe@correo.com</td>
-                        <td>Delegado</td>
-                        <td>
-                            <span>Ver</span>
-                            <input type="checkbox" name="see">
-                            <span>Editar</span>
-                            <input type="checkbox" name="edit">
-                        </td>
-                        <td class="table__body--action">
-                            <div class="table__action--edit" title="Haz clic aquí para editar el usuario"></div>
-                            <div class="table__action--delete" title="Haz clic aquí para eliminar el usuario"></div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <button type="button" class="primary-button" id="add-user">Agregar usuario</button>
-        </section>
-        <!-- modal agregar usuario -->
-        <dialog class="modal add-user">
-            <button class="modal__close" autofocus>
-                <i class="modal__close--icon"></i>
-            </button>
-            <h2 class="add-user__title">Información de Usuario</h2>
-            <form action="./" method="post" class="add-user__form">
-                <label for="add-user-fullname" class="form__label">Nombre Completo</label>
-                <input type="text" name="add-user-fullname" id="add-user-fullname" class="form__input"
-                    placeholder="Ingrese el nombre completo del usuario">
-                <label for="add-user-email" class="form__label">Correo</label>
-                <input type="text" name="add-user-email" id="add-user-email" class="form__input"
-                    placeholder="Ingrese el correo del usuario">
-                <label for="add-user-rol" class="form__label">Rol</label>
-                <select name="add-user-rol" id="add-user-rol" class="form__input form__select">
-                    <optgroup class="form__optgroup" label="Selecciona el rol del usuario">
-                        <option class="form__option" value="delegado">Delegado</option>
-                        <option value="administrador">Administrador</option>
-                    </optgroup>
-                </select>
-                <label class="form__label">Permisos</label>
-                <div class="form__section">
-                    <label class="form__section__label">Ver</label>
-                    <input type="checkbox" name="see">
-                    <label for="edit-add-user" class="form__section__label">Editar</label>
-                    <input type="checkbox" name="edit" id="edit-add-user">
-                </div>
-                <div class="form__container-buttons">
-                    <button class="secondary-button">Cancelar</button>
-                    <button type="submit" class="primary-button">Agregar Usuario</button>
-                </div>
-            </form>
-        </dialog>
-    </main>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <header class="sidebar__header">
+      <img src="../../assets/img/logo-accent.svg" alt="Logo de GestionA" class="header__logo">
+      <div class="header__slogan">
+        <h1 class="slogan__title">GestionA</h1>
+        <h2 class="slogan__description">Sistema de gestión agrícola</h2>
+      </div>
+      <i class="header__icon" id="sidebar-close"></i>
+    </header>
+    <nav class="sidebar__overwiew">
+      <p class="sidebar__label">Gestión de cultivos</p>
+      <ul>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon plant"></i>
+            <span class="option__link--text">Cultivo</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon loop"></i>
+            <span class="option__link--text">Temporada</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon inventory"></i>
+            <span class="option__link--text">Inventario</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon calendar"></i>
+            <span class="option__link--text">Actividades</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon production"></i>
+            <span class="option__link--text">Producción</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon sell"></i>
+            <span class="option__link--text">Ventas</span>
+          </a>
+        </li>
+      </ul>
+      <p class="sidebar__label">Métricas</p>
+      <ul>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon data"></i>
+            <span class="option__link--text">Información</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon dashboard"></i>
+            <span class="option__link--text">Dashboard</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="sidebar__account">
+      <p class="sidebar__label">Cuenta</p>
+      <ul>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon settings"></i>
+            <span class="option__link--text">Configuración</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar__option option__link">
+            <i class="option__icon logout"></i>
+            <span class="option__link--text">Cerrar Sesión</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <footer class="sidebar__footer">
+      <div class="sidebar__profile-image">
+        <span>A</span>
+      </div>
+      <div class="sidebar_profile-information">
+        <p class="profile__username">Jhon Doe</p>
+        <p class="profile__email">jhon.doe@correo.com</p>
+      </div>
+    </footer>
+  </aside>
+  <!-- user profile -->
+  <main class="main-container">
+    <!-- User profile information -->
+    <section class="main-containter__user-profile">
+      <header class="user-profile__header">
+        <h1>Perfil de usuario</h1>
+      </header>
+      <form action="./" class="user-profile__form">
+        <label for="user-fullname" class="form__label">Nombres y apellidos</label>
+        <input type="text" name="user-fullname" id="user-fullname" class="form__input" type="text" value="Jhon Doe">
+        <label for="user-email" class="form__label">Correo electrónico</label>
+        <input type="text" name="user-email" id="user-email" class="form__input" type="email"
+          value="jhon.doe@correo.com" disabled>
+        <label for="user-telephone" class="form__label">Teléfono</label>
+        <input type="text" name="user-telephone" id="user-telephone" class="form__input" type="number"
+          value="9465562123">
+        <h2 class="user-profile__subtitle">Cambiar contraseña</h2>
+        <div class="user-profile__change-password">
+          <div>
+            <label for="current-password" class="form__label">Contraseña actual</label>
+            <input type="password" name="current-password" id="current-password" class="form__input"
+              placeholder="Ingresa tu contraseña">
+          </div>
+          <div>
+            <label for="new-password" class="form__label">Nueva contraseña</label>
+            <input type="password" name="new-password" id="new-password" class="form__input"
+              placeholder="Ingresa tu nueva contraseña">
+          </div>
+          <div>
+            <label for="confirm-password" class="form__label">Confimar contraseña</label>
+            <input type="password" name="confirm-password" id="confirm-password" class="form__input"
+              placeholder="Confirma la contraseña">
+          </div>
+        </div>
+        <button type="submit" class="form__button">Guardar cambios</button>
+      </form>
+    </section>
+    <!-- Admin Users -->
+    <section class="main-container__admin-user">
+      <header class="user-profile__header">
+        <h1>Administrar usuarios</h1>
+      </header>
+      <table class="admin-user__table">
+        <thead class="table__head">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Rol</th>
+            <th>Permisos</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="table__body">
+        </tbody>
+      </table>
+      <button type="button" class="primary-button" id="add-user">Agregar usuario</button>
+    </section>
+    <!-- modal agregar usuario -->
+    <dialog class="modal add-user">
+      <button class="modal__close" autofocus>
+        <i class="modal__close--icon"></i>
+      </button>
+      <h2 class="add-user__title">Agregar un Usuario</h2>
+      <form action="./" method="post" class="add-user__form">
+        <label for="userName" class="form__label">Nombre Completo</label>
+        <input type="text" name="userName" id="userName" class="form__input"
+          placeholder="Ingrese el nombre completo del usuario">
+        <label for="email" class="form__label">Correo</label>
+        <input type="text" name="email" id="email" class="form__input" placeholder="Ingrese el correo del usuario">
+        <label for="rol" class="form__label">Rol</label>
+        <select name="rol" id="rol" class="form__input form__select">
+          <optgroup class="form__optgroup" label="Selecciona el rol del usuario">
+            <option class="form__option" value="Delegado">Delegado</option>
+            <option value="Administrador">Administrador</option>
+          </optgroup>
+        </select>
+        <label class="form__label">Permisos</label>
+        <select name="permissions" id="permissions" class="form__input form__select">
+          <optgroup class="form__optgroup" label="Selecciona el permiso del usuario">
+            <option class="form__option" value="Lector">Ver</option>
+            <option value="Editor">Editar</option>
+          </optgroup>
+        </select>
+        <div class="form__container-buttons">
+          <button type="submit" class="primary-button">Agregar Usuario</button>
+        </div>
+      </form>
+    </dialog>
+    <!-- Model Editar Usuario -->
+    <dialog class="modal edit-user">
+      <button class="modal__close--edit" autofocus>
+        <i class="modal__close--icon"></i>
+      </button>
+      <h2 class="edit-user__title">Editar Usuario</h2>
+      <form action="./" method="post" class="edit-user__form">
+        <label for="userName" class="form__label">Nombre Completo</label>
+        <input type="text" name="userName" id="userName" class="form__input"
+          placeholder="Ingrese el nombre completo del usuario">
+        <label for="email" class="form__label">Correo</label>
+        <input type="text" name="email" id="email" class="form__input" placeholder="Ingrese el correo del usuario">
+        <label for="rol" class="form__label">Rol</label>
+        <select name="rol" id="rol" class="form__input form__select">
+          <optgroup class="form__optgroup" label="Selecciona el rol del usuario">
+            <option class="form__option" value="Delegado">Delegado</option>
+            <option value="Administrador">Administrador</option>
+          </optgroup>
+        </select>
+        <label class="form__label">Permisos</label>
+        <select name="permissions" id="permissions" class="form__input form__select">
+          <optgroup class="form__optgroup" label="Selecciona el permiso del usuario">
+            <option class="form__option" value="Lector">Ver</option>
+            <option value="Editor">Editar</option>
+          </optgroup>
+        </select>
+        <div class="form__container-buttons">
+          <button type="submit" class="primary-button">Guardar</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
 </body>
 
 </html>
