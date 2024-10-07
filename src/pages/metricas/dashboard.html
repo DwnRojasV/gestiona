@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daashboard</title>
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/Favicon.svg">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../script/global.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <!-- Incluir Chart.js -->
+</head>
+
+<body class="metricas"><!-- Sidebar -->
+    <aside class="sidebar">
+        <header class="sidebar__header">
+            <img src="../../assets/img/logo-accent.svg" alt="Logo de GestionA" class="header__logo">
+            <div class="header__slogan">
+                <h1 class="slogan__title">GestionA</h1>
+                <h2 class="slogan__description">Sistema de gestión agrícola</h2>
+            </div>
+            <i class="header__icon" id="sidebar-close"></i>
+        </header>
+        <nav class="sidebar__overwiew">
+            <p class="sidebar__label">Gestión de cultivos</p>
+            <ul>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon plant"></i>
+                        <span class="option__link--text">Cultivo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon loop"></i>
+                        <span class="option__link--text">Temporada</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon inventory"></i>
+                        <span class="option__link--text">Inventario</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon calendar"></i>
+                        <span class="option__link--text">Actividades</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon production"></i>
+                        <span class="option__link--text">Producción</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon sell"></i>
+                        <span class="option__link--text">Ventas</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="sidebar__label">Métricas</p>
+            <ul>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon data"></i>
+                        <span class="option__link--text">Información</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon dashboard"></i>
+                        <span class="option__link--text">Dashboard</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="sidebar__account">
+            <p class="sidebar__label">Cuenta</p>
+            <ul>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon settings"></i>
+                        <span class="option__link--text">Configuración</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon logout"></i>
+                        <span class="option__link--text">Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <footer class="sidebar__footer">
+            <div class="sidebar__profile-image">
+                <span>A</span>
+            </div>
+            <div class="sidebar_profile-information">
+                <p class="profile__username">Jhon Doe</p>
+                <p class="profile__email">jhon.doe@correo.com</p>
+            </div>
+        </footer>
+    </aside>
+    <!-- TODO: user profile -->
+     <main>
+        <h1 id="Titulo">Dashboard</h1><br><br>
+        <h2 class="title_grafico">Balance</h2><br>
+        <div class="container">
+            <aside id="cultivo">
+                <form action="" method="get">
+                    <h2>Cultivo</h2><br>
+                    <label for="cultivo">Selecciona</label>
+                    <select name="cultivo" id="cultivo-select">
+                        <option value="Arroz">Arroz</option>
+                        <option value="Mandarina">Mandarina</option>
+                        <option value="Cacao">Cacao</option>
+                        <option value="Cafe">Café</option>
+                    </select><br><br><br>
+    
+                    <h2>Temporada</h2><br>
+                    <label for="Temporada">Selecciona</label>
+                    <select name="Temporada" id="Temporada">
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select><br><br><br>
+    
+                    <h2>Opciones</h2>
+                    <div>
+                        <input type="radio" name="item" value="A" id="historico">
+                        <label for="historico">Histórico</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="item" value="B" id="rentabilidad">
+                        <label for="rentabilidad">Rentabilidad</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="item" value="C" id="produccion">
+                        <label for="produccion">Producción</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="item" value="D" id="comparativo">
+                        <label for="comparativo">Comparativo</label>
+                    </div>
+                </form>
+            </aside>
+
+
+       
+
+            
+            <section class="container_grafico">
+                
+                <div class="grafico">              </div>
+                
+  
+                <div class="container_leyenda">
+                    <span class="leyenda_all">
+                        <span class="color_insumos"></span>
+                        <p class="item"> 40% Insumos</p>
+                    </span>
+                    <span class="leyenda_all">
+                        <span class="color_mano_obra"></span>
+                        <p class="item">30% Mano de obra</p>
+                    </span>
+                    <span class="leyenda_all">
+                        <span class="color_ventas"></span>
+                        <p class="item">18% Ventas</p>
+                    </span>
+                    <span class="leyenda_all">
+                        <span class="color_produccion"></span>
+                        <p class="items">12% Produccion</p>
+                    </span>
+                    <p class="total">Total: $ 16.235.000</p>
+                </div>
+            </section>
+
+
+    
+            
+        </div> <!-- Fin del contenedor -->
+
+
+
+
+       
+
+        
+
+        
+</body>
+
+</html>
