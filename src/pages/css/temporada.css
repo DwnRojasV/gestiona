@@ -1,0 +1,183 @@
+/* AJUSTES GENERALES */
+:root{
+    --color-principal:#1DA889;
+    --color-fondo:#E0E1E6;
+}
+html{
+    font-family: ubuntu, sans-serif;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+    margin: 0;
+    background-color: #FFF;
+}
+
+/* ESTILOS TITULO Y MENU */
+.title-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.title-menu h1{
+    color: var(--color-principal);
+    font-weight: 800;
+}
+
+.title-menu i {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #000;
+}
+
+/* --- */
+main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Estilo notas y crear-buscar */
+.temporada-actions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-text{
+    display: flex;
+    font-size: 2rem;
+    color: #000;
+}
+.create-text h2{
+    margin: 0;
+    margin-left: 5px;
+    font-size: 1.5rem;
+    color: var(--color-principal);
+}
+
+.temporada-actions-1{
+    display: flex;
+}
+
+.comenzar-boton{
+    max-width: 300px;
+    width: 10vw;
+    min-width: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    color: #FFF;
+    background-color: var(--color-principal);
+}
+
+.terminar-boton{
+    max-width: 300px;
+    width: 10vw;
+    min-width: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    border-radius: .5rem;
+    color: #FFF;
+    background-color: red;
+}
+
+/* ESTILOS TABLAS */
+table{
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    border-collapse: collapse;
+    outline: thin solid var(--color-principal);
+    outline-offset: 0.5rem;
+}
+
+th{
+    padding: 1rem;
+    text-align: left;
+    border-bottom: thin solid var(--color-principal);
+}
+td{
+    padding: .3rem;
+}
+
+td{
+    border-right: thin solid var(--color-principal);
+    border-left: thin solid var(--color-principal);
+}
+
+tfoot td{
+    border-right: none;
+    border-left: none;
+    border-top: thin solid var(--color-principal);
+    text-align: center;
+}
+
+
+.actions{
+    text-align: center;
+}
+.actions i {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/* ESTILOS BACK */
+
+.back {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    right: 10%;
+}
+
+@media (max-width:1024px){
+    /* Estilo boton */
+    .notes{
+        height: 5vh;
+    }
+    /* Estilo tabla */
+    .temporada-table{
+        outline: none;
+    }
+    .temporada-table thead{
+        display: none;
+    }
+    .temporada-table tbody tr:nth-child(even) {
+        background-color: var(--color-fondo);
+    
+    }
+    .temporada-table tr{
+        display: block;
+        border-top: 1px solid aqua;
+    }
+    .temporada-table td{
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+    /* NUEVAS CABECERAS */
+    .temporada-table tbody td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .actions i {
+        margin-left: 3% ;
+        margin-right: 3%;
+    }
+    .temporada-table tfoot td{
+        padding: 0;
+        text-align: center;
+    }
+}
