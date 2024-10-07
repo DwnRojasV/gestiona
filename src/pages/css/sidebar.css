@@ -1,3 +1,22 @@
+.sidebar p,
+.sidebar h1,
+.sidebar ul,
+.sidebar div
+{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.sidebar h2{
+    margin: 0;
+}
+.sidebar ul{
+    list-style: none;
+}
+
 .sidebar,
 .sidebar__account,
 .sidebar__footer,

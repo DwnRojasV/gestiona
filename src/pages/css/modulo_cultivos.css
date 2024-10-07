@@ -1,3 +1,6 @@
+@import url("./global.css");
+/* @import url("./reset.css"); */
+@import url("./sidebar.css");
 /* AJUSTES GENERALES */
 :root{
     --color-principal:#1DA889;
@@ -8,11 +11,13 @@ html{
     box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 body{
     margin: 0;
     background-color: var(--color-fondo);
+    display: flex;
+    line-height: 1;
 }
 
 /* ESTILOS TITULO Y MENU */
