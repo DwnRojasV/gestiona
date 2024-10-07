@@ -1,0 +1,149 @@
+/* AJUSTES GENERALES */
+:root{
+    --color-principal:#1DA889;
+    --color-fondo:#E0E1E6;
+}
+html{
+    font-family: ubuntu, sans-serif;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+    margin: 0;
+    background-color: #FFF;
+}
+
+/* ESTILOS TITULO Y MENU */
+.title-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title-menu h1{
+    color: var(--color-principal);
+    font-weight: 800;
+}
+
+.title-menu i {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #000;
+}
+
+/* --- */
+main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Estilo crear-buscar */
+.actions-1{
+    display: flex;
+    justify-content: right;
+}
+
+
+.create-find{
+    display: flex;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #000;
+}
+
+.create-find i{
+    margin-left: 10px;
+}
+/* ESTILOS TABLAS */
+table{
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    border-collapse: collapse;
+    outline: thin solid var(--color-principal);
+    outline-offset: 0.5rem;
+}
+
+th{
+    padding: 1rem;
+    text-align: left;
+    border-bottom: thin solid var(--color-principal);
+}
+td{
+    padding: .3rem;
+}
+
+td{
+    border-right: thin solid var(--color-principal);
+    border-left: thin solid var(--color-principal);
+}
+
+tfoot td{
+    border-right: none;
+    border-left: none;
+    border-top: thin solid var(--color-principal);
+    text-align: center;
+}
+
+
+.actions{
+    text-align: center;
+}
+.actions i {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/* ESTILOS BACK */
+
+.back {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    right: 10%;
+}
+
+@media (max-width:1024px){
+    /* Estilo tabla */
+    .actividades-table{
+        outline: none;
+    }
+    .actividades-table thead{
+        display: none;
+    }
+    .actividades-table tbody tr:nth-child(even) {
+        background-color: var(--color-fondo);
+    
+    }
+    .actividades-table tr{
+        display: block;
+        border-top: 1px solid aqua;
+    }
+    .actividades-table td{
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+    /* NUEVAS CABECERAS */
+    .actividades-table tbody td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .actions i {
+        margin-left: 3% ;
+        margin-right: 3%;
+    }
+    .actividades-table tfoot td{
+        padding: 0;
+        text-align: center;
+    }
+}
