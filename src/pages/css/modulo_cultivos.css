@@ -99,6 +99,7 @@ section:hover{
 .index-container{
     padding: var(--padding-container) 0;
     overflow: auto;
+    flex: 1;
 }
 
 
