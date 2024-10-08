@@ -1,3 +1,6 @@
+@import url("../css/global.css");
+@import url("../css/sidebar.css");
+
 /* AJUSTES GENERALES */
 :root {
   --color-principal: #1da889;
@@ -34,6 +37,7 @@ body {
   font-size: 2rem;
   margin-left: 2rem;
   color: #000;
+  visibility: hidden;
 }
 
 /* --- */
