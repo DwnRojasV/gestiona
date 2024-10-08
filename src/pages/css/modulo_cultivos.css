@@ -1,5 +1,4 @@
 @import url("./global.css");
-/* @import url("./reset.css"); */
 @import url("./sidebar.css");
 /* AJUSTES GENERALES */
 :root{
@@ -99,6 +98,7 @@ section:hover{
 
 .index-container{
     padding: var(--padding-container) 0;
+    overflow: auto;
 }
 
 
