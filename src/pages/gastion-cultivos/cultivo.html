@@ -1,175 +1,279 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultivo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/cultivo.css">
+    <script src="../script/global.js" defer></script>
 </head>
+
 <body>
-    <div class="title-menu">
-        <i class="fa-solid fa-bars"></i>
-        <h1>CULTIVOS</h1>
-        <div></div>
-    </div>
-    <main>
-        <div class="notes-actions">
-            <div class="notes">Notas</div>
-            <a class="create-find" href="">
-                <i class="fa-solid fa-circle-plus"></i>
-                <i class="fa-solid fa-magnifying-glass"></i>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <header class="sidebar__header">
+            <a href="../gastion-cultivos/index.html">
+                <img src="../../assets/img/logo-accent.svg" alt="Logo de GestionA" class="header__logo">
+                <div class="header__slogan">
+                    <h1 class="slogan__title">GestionA</h1>
+                    <h2 class="slogan__description">Sistema de gestión agrícola</h2>
+                </div>
             </a>
+            <i class="header__icon" id="sidebar-close"></i>
+        </header>
+        <nav class="sidebar__overwiew">
+            <p class="sidebar__label">Gestión de cultivos</p>
+            <ul>
+                <li>
+                    <a href="../gastion-cultivos/cultivo.html" class="sidebar__option option__link">
+                        <i class="option__icon plant"></i>
+                        <span class="option__link--text">Cultivo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../gastion-cultivos/temporada.html" class="sidebar__option option__link">
+                        <i class="option__icon loop"></i>
+                        <span class="option__link--text">Temporada</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon inventory"></i>
+                        <span class="option__link--text">Inventario</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../gastion-cultivos/actividades.html" class="sidebar__option option__link">
+                        <i class="option__icon calendar"></i>
+                        <span class="option__link--text">Actividades</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon production"></i>
+                        <span class="option__link--text">Producción</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon sell"></i>
+                        <span class="option__link--text">Ventas</span>
+                    </a>
+                </li>
+            </ul>
+            <p class="sidebar__label">Métricas</p>
+            <ul>
+                <li>
+                    <a href="../metricas/informacion.html" class="sidebar__option option__link">
+                        <i class="option__icon data"></i>
+                        <span class="option__link--text">Información</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../metricas/dashboard.html" class="sidebar__option option__link">
+                        <i class="option__icon dashboard"></i>
+                        <span class="option__link--text">Dashboard</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="sidebar__account">
+            <p class="sidebar__label">Cuenta</p>
+            <ul>
+                <li>
+                    <a href="../autenticacion/profile.html" class="sidebar__option option__link">
+                        <i class="option__icon settings"></i>
+                        <span class="option__link--text">Configuración</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar__option option__link">
+                        <i class="option__icon logout"></i>
+                        <span class="option__link--text">Cerrar Sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <footer class="sidebar__footer">
+            <div class="sidebar__profile-image">
+                <span>A</span>
+            </div>
+            <div class="sidebar_profile-information">
+                <p class="profile__username">Jhon Doe</p>
+                <p class="profile__email">jhon.doe@correo.com</p>
+            </div>
+        </footer>
+    </aside>
+    <div class="cultivo-container">
+        <div class="title-menu">
+            <i class="fa-solid fa-bars"></i>
+            <h1>CULTIVOS</h1>
+            <div></div>
         </div>
-        <table class="cultivo-table">
-            <thead>
-                <tr>
-                    <th>ID cultivo</th>
-                    <th>Nombre</th>
-                    <th>Tipo de siembra</th>
-                    <th>Área del terreno</th>
-                    <th>Fecha de inicio</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label=ID>0001</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0002</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0003</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0004</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0005</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0006</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0007</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0008</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0009</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-label=ID>0010</td>
-                    <td data-label="Nombre">XXXXXXXXX</td>
-                    <td data-label="Tipo de siembra">XXXXXXXXX</td>
-                    <td data-label="Área del terreno">XXXXXXXXX</td>
-                    <td data-label="Fecha de inicio">XX/XX/XXXX</td>
-                    <td class="actions" data-label="Acciones">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                        <i class="fa-solid fa-eye"></i>
-                    </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="6">
-                        <i class="fa-solid fa-arrow-left"></i> 
-                        1-10
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-        <a class="back" href="index.html">
-            <i class="fa-solid fa-arrow-left"></i>
-        </a>
-    </main>
+        <main>
+            <div class="notes-actions">
+                <div class="notes">Notas</div>
+                <a class="create-find" href="">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <table class="cultivo-table">
+                <thead>
+                    <tr>
+                        <th>ID cultivo</th>
+                        <th>Nombre</th>
+                        <th>Tipo de siembra</th>
+                        <th>Área del terreno</th>
+                        <th>Fecha de inicio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label=ID>0001</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0002</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0003</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0004</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0005</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0006</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0007</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0008</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0009</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label=ID>0010</td>
+                        <td data-label="Nombre">XXXXXXXXX</td>
+                        <td data-label="Tipo de siembra">XXXXXXXXX</td>
+                        <td data-label="Área del terreno">XXXXXXXXX</td>
+                        <td data-label="Fecha de inicio">XX/XX/XXXX</td>
+                        <td class="actions" data-label="Acciones">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                            <i class="fa-solid fa-eye"></i>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            1-10
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <a class="back" href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </main>
+    </div>
 </body>
+
 </html>
