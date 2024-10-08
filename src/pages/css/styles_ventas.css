@@ -1,0 +1,118 @@
+/* AJUSTES GENERALES */
+:root {
+  --color-principal: #1da889;
+  --color-fondo: #e0e1e6;
+}
+html {
+  font-family: ubuntu, sans-serif;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+/* ESTILOS TITULO Y MENU */
+.title-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title-menu h1 {
+  color: var(--color-principal);
+  font-weight: 500;
+}
+
+.title-menu i {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: #000;
+}
+
+/* --- */
+main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Estilo notas y crear-buscar */
+.notes-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.notes {
+  width: 15%;
+  height: 6vh;
+  background-color: var(--color-principal);
+  padding-top: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.create-find {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #000;
+}
+/* ESTILOS TABLAS */
+table {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  border-collapse: collapse;
+  outline: thin solid var(--color-principal);
+  outline-offset: 0.5rem;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: thin solid var(--color-principal);
+}
+td {
+  padding: 0.3rem;
+}
+
+td {
+  border-right: thin solid var(--color-principal);
+  border-left: thin solid var(--color-principal);
+}
+
+tfoot td {
+  border-right: none;
+  border-left: none;
+  border-top: thin solid var(--color-principal);
+  text-align: center;
+}
+
+.actions {
+  text-align: center;
+}
+.actions i {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/* ESTILOS BACK */
+
+.back {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  right: 10%;
+}
+/* estilo botones*/
+.btn_crud {
+  background: none;
+  border: none;
+  font-size: medium;
+}

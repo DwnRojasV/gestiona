@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles_ventas.css" />
+  </head>
+  <body>
+    <div id="modalContainer"></div>
+    <div class="title-menu">
+      <i class="fa-solid fa-bars"></i>
+      <h1>REGISTRO DE VENTA</h1>
+      <div></div>
+    </div>
+    <main>
+      <div class="notes-actions">
+        <div class="notes">VENTA</div>
+        <a class="create-find" href="">
+          <button
+            class="fa-solid fa-circle-plus"
+            onclick="popup_insert()"
+          ></button>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID Ventas</th>
+            <th>ID Produccíon</th>
+            <th>ID Temporada</th>
+            <th>Fecha Venta</th>
+            <th>Cantidad Vendida</th>
+            <th>Precio Unitario</th>
+            <th>Precio Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0001</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0002</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0003</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0004</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0005</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0006</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0007</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0008</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0009</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+          <tr>
+            <td>0010</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XX/XX/XXXX</td>
+            <td>XXXXXXXXX</td>
+            <td>XXXXXXXXX</td>
+            <td class="actions">
+              <button
+                class="fa-solid fa-pen-to-square btn_crud"
+                onclick="popup_act()"
+              ></button>
+              <button
+                class="fa-solid fa-trash-can btn_crud"
+                onclick="popup_delete()"
+              ></button>
+              <button
+                class="fa-solid fa-eye btn_crud"
+                onclick="popup_visu()"
+              ></button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="8">
+              <i class="fa-solid fa-arrow-left"></i>
+              1-10
+              <i class="fa-solid fa-arrow-right"></i>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <a class="back" href="">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--enlaza el principal con el js del popup-->
+    <script src="../script/popup.js"></script>
+  </body>
+</html>
