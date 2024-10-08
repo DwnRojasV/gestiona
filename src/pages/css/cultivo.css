@@ -17,8 +17,6 @@ html{
 body{
     margin: 0;
     background-color: #FFF;
-    display: flex;
-    line-height: 1;
 }
 
 /* ESTILOS TITULO Y MENU */
@@ -115,10 +113,6 @@ tfoot td{
     color: #000;
     position: relative;
     right: 10%;
-}
-.cultivo-container {
-    flex: 1;
-    padding: var(--padding) 0;
 }
 
 @media (max-width:1024px){

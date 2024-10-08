@@ -4,7 +4,6 @@
 :root{
     --color-principal:var(--accent-color);
     --color-fondo:var(--accent-background-1);
-    --padding-container: 50px
 }
 html{
     font-family: ubuntu, sans-serif;
@@ -16,8 +15,6 @@ html{
 body{
     margin: 0;
     background-color: var(--color-fondo);
-    display: flex;
-    line-height: 1;
 }
 
 /* ESTILOS TITULO Y MENU */
@@ -94,12 +91,6 @@ section:hover{
     height: 23vh;
     width: 425px;
     transition-duration: .5s;
-}
-
-.index-container{
-    padding: var(--padding-container) 0;
-    overflow: auto;
-    flex: 1;
 }
 
 
