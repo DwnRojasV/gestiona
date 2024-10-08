@@ -1,7 +1,11 @@
+@import url("../css/global.css");
+@import url("../css/sidebar.css");
+
 /* AJUSTES GENERALES */
 :root{
     --color-principal:#1DA889;
     --color-fondo:#E0E1E6;
+    --padding: 50px
 }
 html{
     font-family: ubuntu, sans-serif;
@@ -32,6 +36,7 @@ body{
     font-size: 2rem;
     margin-left: 2rem;
     color: #000;
+    visibility: hidden;
 }
 
 /* --- */

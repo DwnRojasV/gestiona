@@ -40,6 +40,7 @@
  /* values */
  --sidebar-width: 286px;
  --radius: 10px;
+ --padding-container: 50px;
 }
 
 
@@ -47,6 +48,8 @@ body {
  height: 100vh;
  width: 100vw;
  font-weight: var(--regular);
+ line-height: 1;
+ display: flex;
 }
 
 /* Estilo del texto */
@@ -177,4 +180,10 @@ body,
  background-repeat: no-repeat;
  width: 20px;
  aspect-ratio: 1;
+}
+
+.page-container{
+  padding: var(--padding-container) 0;
+  overflow: auto;
+  flex: 1;
 }
