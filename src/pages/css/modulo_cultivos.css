@@ -1,18 +1,24 @@
+@import url("./global.css");
+/* @import url("./reset.css"); */
+@import url("./sidebar.css");
 /* AJUSTES GENERALES */
 :root{
-    --color-principal:#1DA889;
-    --color-fondo:#E0E1E6;
+    --color-principal:var(--accent-color);
+    --color-fondo:var(--accent-background-1);
+    --padding-container: 50px
 }
 html{
     font-family: ubuntu, sans-serif;
     box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 body{
     margin: 0;
     background-color: var(--color-fondo);
+    display: flex;
+    line-height: 1;
 }
 
 /* ESTILOS TITULO Y MENU */
@@ -24,13 +30,14 @@ body{
 }
 
 .title-menu h1{
-    color: var(--color-principal);
-    font-weight: 800;
+    color: var(--accent-text-1);
+    font-weight: var(--bold);
 }
 
 .title-menu i {
     font-size: 2rem;
     margin-left: 2rem;
+    visibility: hidden;
 }
 
 /* ESTILOS SECCIONES */
@@ -60,19 +67,28 @@ section a{
 .text-section{
     width: 70%;
     flex-wrap: wrap;
-    font-size: 2rem;
+    font-size: 1.8rem;
     justify-content: space-evenly;
     text-align: center;
-    color: #000;
-    background-color: #fff;
+    color: var(--accent-text-1);
+}
+
+[class^='section-']{
+    background-color: var(--accent-interactive-component-2);
+    border: 1px solid var(--accent-border-separator-3);
+    border-radius: var(--radius);
+    box-shadow: 0px 1px 8px 1px var(--gray-border-separator-3);
 }
 
 
 .icon-section{
     width: 30%;
     font-size: 4rem;
-    color: #fff;
-    background-color: var(--color-principal);
+    color: var(--accent-text-2);
+    background-color: var(--accent-border-separator-1);
+    border: transparent;
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
 }
 
 section:hover{
@@ -81,5 +97,8 @@ section:hover{
     transition-duration: .5s;
 }
 
+.index-container{
+    padding: var(--padding-container) 0;
+}
 
 

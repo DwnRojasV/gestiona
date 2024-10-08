@@ -42,13 +42,6 @@
  --radius: 10px;
 }
 
-a {
- color: var(--accent-text-1);
-}
-
-a:visited {
- color: var(--accent-color);
-}
 
 body {
  height: 100vh;

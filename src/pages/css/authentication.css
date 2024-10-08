@@ -3,7 +3,13 @@
 .body {
     background-color: var(--accent-background-2);
 }
-
+a {
+    color: var(--accent-text-1);
+   }
+   
+   a:visited {
+    color: var(--accent-color);
+   }
 .body,
 .container,
 .container__cardform,
