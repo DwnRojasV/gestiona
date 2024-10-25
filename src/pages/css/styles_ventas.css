@@ -116,3 +116,9 @@ tfoot td {
   border: none;
   font-size: medium;
 }
+.btn_insert {
+  background: none;
+  border: none;
+  font-size: xxx-large;
+}
+

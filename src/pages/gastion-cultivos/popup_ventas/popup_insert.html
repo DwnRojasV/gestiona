@@ -1,84 +1,116 @@
-<div id="modalInsert">
+<!-- Modal -->
+
+<div class="modal" id="modalInsert">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Insertar Venta</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body"> 
+      <div class="mb-3">
+        <label for="lbl_venta" class="form-label"
+          >Id Venta</label
+        >
+        <input class="form-control" list="fruitOptions" id="lbl_venta" name="fruit" placeholder="Selecciona id Venta...">
+        <datalist id="Options_idVenta">
+            <option value="xxx">
+            <option value="xxx">
+            <option value="xxx">
+            <option value="xxx">
+            <option value="xxx">
+        </datalist>
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label"
-            >Id Ventas</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput"
-            placeholder="Example input placeholder"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput2" class="form-label"
+          <label for="lbl_produccion" class="form-label"
             >Id Producción</label
           >
-          <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput2"
-            placeholder="Another input placeholder"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label"
-            >Id Temporada</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput"
-            placeholder="Example input placeholder"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput2" class="form-label"
-            >Fecha Venta</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput2"
-            placeholder="Another input placeholder"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label"
-            >Cantidad Vendida</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput"
-            placeholder="Example input placeholder"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput2" class="form-label"
-            >Precio Unitario</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput2"
-            placeholder="Another input placeholder"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label"
-            >Precio Total</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="formGroupExampleInput"
-            placeholder="Example input placeholder"
-          />
-        </div>
+          <input class="form-control"list="fruitOptions" id="lbl_produccion" name="fruit" placeholder="Selecciona id Producción...">
+          <datalist id="fruitOptions">
+              <option value="xxx">
+              <option value="xxx">
+              <option value="xxx">
+              <option value="xxx">
+              <option value="xxx">
+          </datalist>
+          <div class="mb-3">
+            <label for="lbl_temporada" class="form-label"
+              >Id Temporada</label
+            >
+            <input class="form-control"list="fruitOptions" id="lbl_temporada" name="fruit" placeholder="Selecciona id Temporada...">
+          <datalist id="fruitOptions">
+              <option value="xxx">
+              <option value="xxx">
+              <option value="xxx">
+              <option value="xxx">
+              <option value="xxx">
+          </datalist>
+          </div>
+          <div class="mb-3">
+            <label for="lbl_fechaVenta" class="form-label"
+              >Fecha Venta</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="lbl_fechaVenta"
+              placeholder="Another input placeholder"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="lbl_CantVendida" class="form-label"
+              >Cantidad Vendida</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="lbl_CantVendida"
+              placeholder="Ingresa la Cantidad Vendida"
+            />         
+          </div>  
+          <div class="mb-3">
+            <label for="lbl_preciUnitario" class="form-label"
+              >Precio Unitario</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="lbl_preciUnitario"
+              placeholder="Ingresa el Valor Unitario del producto"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="lbl_preciTotal" class="form-label"
+              >Precio Total</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="lbl_preciTotal"
+              placeholder="Ingresa el Precio total de la Venta" required
+            />
+          </div> 
+          <div class="mb-3">
+            <label for="lbl_observación" class="form-label" >Observación de la Venta</label>
+            <textarea class="form-control" id="lbl_observación" rows="3"></textarea>
+          </div> 
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-dismiss="modal"
+        >
+          Insertar venta
+        </button>
       </div>
     </div>
   </div>
